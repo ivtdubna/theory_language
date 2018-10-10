@@ -18,6 +18,14 @@ class auto():
             self.delta.append(lst)
 
     def work(self, input_str):
+        for i in input_str:
+            for d in delta:
+                if self.current_condition == d[0] and i == d[1]:
+                    self.current_condition = d[2]
+        if self.current_condition in self.final_condition:
+            return True
+        else:
+            return False
 
         
 
